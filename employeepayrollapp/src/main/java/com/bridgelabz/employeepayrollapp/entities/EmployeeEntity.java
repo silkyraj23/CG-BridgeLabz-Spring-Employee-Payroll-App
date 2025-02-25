@@ -17,7 +17,7 @@ public class EmployeeEntity {
     @NotNull(message = "This field can't be null")
     private String department;
 
-    private Double salary; // Changed from `double` to `Double`
+    private Double salary;
 
     // Default constructor required by JPA
     public EmployeeEntity() {
@@ -36,6 +36,7 @@ public class EmployeeEntity {
     }
 
     public void setId(Long id) {
+
         this.id = id;
     }
 
@@ -44,22 +45,27 @@ public class EmployeeEntity {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
-    public String getDepartment() {
+    public String getDepartment()
+    {
         return department;
     }
 
     public void setDepartment(String department) {
+
         this.department = department;
     }
 
     public Double getSalary() {
+
         return salary;
     }
 
     public void setSalary(Double salary) {
+
         this.salary = salary;
     }
 }
