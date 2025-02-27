@@ -3,12 +3,10 @@ package com.bridgelabz.employeepayrollapp.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
-<<<<<<< HEAD
 import jakarta.validation.constraints.Pattern;
-=======
 import lombok.Data;
 import lombok.NoArgsConstructor;
->>>>>>> UC6_EMPLOYEE_PAYROLL_USE_LOMBOK
+
 
 @Entity
 @Table(name = "employees")
