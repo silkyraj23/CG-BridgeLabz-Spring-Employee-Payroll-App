@@ -23,4 +23,11 @@ public class EmployeePayrollExceptionHandler extends RuntimeException {
         });
         return new ResponseEntity<Map<String, String>>(response, HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(NoSuchElementException.class)
+    public ResponseEntity<Map<String, String>> handleNoSuchElementException(NoSuchElementException exception){
+        Map<String, String> response = new HashMap<>();
+
+        response.put("Employee not found in the database", exception.getMessage());
+        return new ResponseEntity<Map<String, String>>(response, HttpStatus.NOT_FOUND);
+    }
 }
