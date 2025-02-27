@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
@@ -41,6 +42,7 @@ public class EmployeeController {
             log.info("Employee found: {}", employee.get());
         }else {
             log.warn("Employee with id {} not found", id);
+            throw new NoSuchElementException("For id " + id.toString());
         }
         return employee;
     }
